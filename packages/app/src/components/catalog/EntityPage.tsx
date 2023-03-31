@@ -30,6 +30,7 @@ import {
   isGithubActionsAvailable,
   EntityGithubActionsContent,
 } from '@backstage/plugin-github-actions';
+import { EntityGithubDeploymentsCard } from '@backstage/plugin-github-deployments';
 import {
   EntityUserProfileCard,
   EntityGroupProfileCard,
@@ -116,6 +117,9 @@ const overviewContent = (
     {entityWarningContent}
     <Grid item md={6}>
       <EntityAboutCard variant="gridItem" />
+    </Grid>
+    <Grid item xs={12} sm={6} md={4}>
+      <EntityGithubDeploymentsCard />
     </Grid>
     <Grid item md={6} xs={12}>
       <EntityCatalogGraphCard variant="gridItem" height={400} />
